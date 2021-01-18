@@ -1,25 +1,25 @@
 <!doctype html>
 <title>Basic Emulator</title><!-- not BASIC! -->
 
-<script src="https://cdn.jsdelivr.net/gh/MHuiG/linux/build/libv86.js"></script>
+<script src="build/libv86.js"></script>
 <script>
 "use strict";
 
 window.onload = function()
 {
     var emulator = window.emulator = new V86Starter({
-        wasm_path: "https://cdn.jsdelivr.net/gh/MHuiG/linux/build/v86.wasm",
+        wasm_path: "build/v86.wasm",
         memory_size: 32 * 1024 * 1024,
         vga_memory_size: 2 * 1024 * 1024,
         screen_container: document.getElementById("screen_container"),
         bios: {
-            url: "https://cdn.jsdelivr.net/gh/MHuiG/linux/bios/seabios.bin",
+            url: "bios/seabios.bin",
         },
         vga_bios: {
-            url: "https://cdn.jsdelivr.net/gh/MHuiG/linux/bios/vgabios.bin",
+            url: "bios/vgabios.bin",
         },
         cdrom: {
-            url: "https://cdn.jsdelivr.net/gh/MHuiG/linux/images/linux.iso",
+            url: "images/linux.iso",
         },
         autostart: true,
     });
